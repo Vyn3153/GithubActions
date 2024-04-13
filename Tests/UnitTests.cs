@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using NUnit.Framework;
 
 namespace GithubActionsLab
@@ -31,5 +31,12 @@ namespace GithubActionsLab
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
+        public void Multiply_Valid()
+        {
+            Assert.AreEqual(2, Program.Multiply("1", "2"));
+            Assert.AreEqual(6, Program.Multiply("3", "2"));
+            Assert.AreEqual(30, Program.Multiply("5", "7"));
+        }
     }
 }
